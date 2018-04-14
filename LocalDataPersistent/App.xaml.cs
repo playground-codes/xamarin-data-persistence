@@ -4,13 +4,15 @@ namespace LocalDataPersistent
 {
     public partial class App : Application
     {
+        public static PeopleRepository PeopleRepository { get; private set; }
+
         public App(string databaseLocation)
         {
             InitializeComponent();
 
-            LocalDataPersistent.MainPage page = new MainPage(){
-                databasePath = databaseLocation
-            };
+            PeopleRepository = new PeopleRepository(databaseLocation);
+
+            MainPage page = new MainPage();
 
             MainPage = new NavigationPage(page);
         }

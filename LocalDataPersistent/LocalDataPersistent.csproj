@@ -49,6 +49,8 @@
     <Compile Include="PeoplePage.xaml.cs">
       <DependentUpon>PeoplePage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="PeopleRepository.cs" />
+    <Compile Include="Person.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Xamarin.Forms.Core">

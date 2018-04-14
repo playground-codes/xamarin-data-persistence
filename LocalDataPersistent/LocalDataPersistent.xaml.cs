@@ -5,9 +5,8 @@ namespace LocalDataPersistent
 {
     public partial class MainPage : ContentPage
     {
-        public string databasePath;
 
-        private PreferenceHelper preferenceHelper;
+        PreferenceHelper preferenceHelper;
         public MainPage()
         {
             InitializeComponent();
