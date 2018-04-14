@@ -12,19 +12,17 @@ namespace LocalDataPersistent
             InitializeComponent();
         }
 
-        void OnAddPeopleClicked(object sender, EventArgs args)
+        async void OnAddPeopleClicked(object sender, EventArgs args)
         {
-            statusMessage.Text = "";
-
-            App.PeopleRepository.AddNewPerson(newPerson.Text);
+            statusMessage.Text = string.Empty;
+            await App.PeopleRepository.AddNewPerson(newPerson.Text);
             statusMessage.Text = App.PeopleRepository.StatusMessage;
         }
 
-        void OnGetAllPeopleClicked(object sender, EventArgs args)
+        async void OnGetAllPeopleClicked(object sender, EventArgs args)
         {
-            statusMessage.Text = "";
-
-            List<Person> people = App.PeopleRepository.GetAllPeople();
+            statusMessage.Text = string.Empty;
+            var people = await App.PeopleRepository.GetAllPeople();
             peopleList.ItemsSource = people;
         }
     }

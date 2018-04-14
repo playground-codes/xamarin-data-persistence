@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using SQLite;
+using System.Threading.Tasks;
 
 namespace LocalDataPersistent
 {
@@ -9,15 +10,15 @@ namespace LocalDataPersistent
     {
         public string StatusMessage { get; set; }
 
-        private SQLiteConnection connection;
+        private SQLiteAsyncConnection connection;
 
         public PeopleRepository(string dbPath)
         {
-            connection = new SQLiteConnection(dbPath);
-            connection.CreateTable<Person>();
+            connection = new SQLiteAsyncConnection(dbPath);
+            connection.CreateTableAsync<Person>().Wait();
         }
 
-        public void AddNewPerson(string name)
+        public async Task AddNewPerson(string name)
         {
             int result = 0;
             try
@@ -26,7 +27,7 @@ namespace LocalDataPersistent
                 if (string.IsNullOrEmpty(name))
                     throw new Exception("Valid name required");
                 
-                result = connection.Insert(new Person { Name = name });
+                result = await connection.InsertAsync(new Person { Name = name });
 
                 StatusMessage = string.Format("{0} record(s) added [Name: {1})", result, name);
             }
@@ -37,10 +38,10 @@ namespace LocalDataPersistent
 
         }
 
-        public List<Person> GetAllPeople()
+        public async Task<List<Person>> GetAllPeople()
         {
             try {
-                return connection.Table<Person>().ToList();
+                return await connection.Table<Person>().ToListAsync();
             } catch (Exception ex) {
                 StatusMessage = string.Format("Failed to retrieve data. {0}", ex.Message);
             }
