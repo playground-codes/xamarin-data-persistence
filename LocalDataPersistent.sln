@@ -12,6 +12,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LocalDataPersistent.Droid",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LocalDataPersistent.iOS", "LocalDataPersistent.iOS\LocalDataPersistent.iOS.csproj", "{8B090E8D-C16A-49D5-BD0A-8FDC136A9EF6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LocalDataPersistent.Tests", "LocalDataPersistent.Tests\LocalDataPersistent.Tests.csproj", "{7608D985-A277-480A-A91D-02506AAE1534}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -58,5 +60,17 @@ Global
 		{8B090E8D-C16A-49D5-BD0A-8FDC136A9EF6}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
 		{8B090E8D-C16A-49D5-BD0A-8FDC136A9EF6}.Debug|iPhone.ActiveCfg = Debug|iPhone
 		{8B090E8D-C16A-49D5-BD0A-8FDC136A9EF6}.Debug|iPhone.Build.0 = Debug|iPhone
+		{7608D985-A277-480A-A91D-02506AAE1534}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7608D985-A277-480A-A91D-02506AAE1534}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7608D985-A277-480A-A91D-02506AAE1534}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7608D985-A277-480A-A91D-02506AAE1534}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7608D985-A277-480A-A91D-02506AAE1534}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{7608D985-A277-480A-A91D-02506AAE1534}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
+		{7608D985-A277-480A-A91D-02506AAE1534}.Release|iPhone.ActiveCfg = Release|Any CPU
+		{7608D985-A277-480A-A91D-02506AAE1534}.Release|iPhone.Build.0 = Release|Any CPU
+		{7608D985-A277-480A-A91D-02506AAE1534}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{7608D985-A277-480A-A91D-02506AAE1534}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
+		{7608D985-A277-480A-A91D-02506AAE1534}.Debug|iPhone.ActiveCfg = Debug|Any CPU
+		{7608D985-A277-480A-A91D-02506AAE1534}.Debug|iPhone.Build.0 = Debug|Any CPU
 	EndGlobalSection
 EndGlobal

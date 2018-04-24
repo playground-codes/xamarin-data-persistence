@@ -16,28 +16,43 @@ namespace LocalDataPersistent
             settings = CrossSettings.Current;
         }
 
-        public void SaveName(string name) {
-            settings.AddOrUpdateValue(NAME_KEY, name);
+        public string Name
+        {
+            set
+            {
+                settings.AddOrUpdateValue(NAME_KEY, value);
+            }
+
+            get
+            {
+                return settings.GetValueOrDefault(NAME_KEY, "");
+            }
         }
 
-        public void SaveAge(int age) {
-            settings.AddOrUpdateValue(AGE_KEY, age);
+        public int Age
+        {
+            set
+            {
+                settings.AddOrUpdateValue(AGE_KEY, value);
+            }
+
+            get
+            {
+                return settings.GetValueOrDefault(AGE_KEY, -1);
+            }
         }
 
-        public void SaveEmail(string email) {
-            settings.AddOrUpdateValue(EMAIL_KEY, email);
-        }
+        public string Email
+        {
+            set
+            {
+                settings.AddOrUpdateValue(EMAIL_KEY, value);
+            }
 
-        public string GetName() {
-            return settings.GetValueOrDefault(NAME_KEY, "");
-        }
-
-        public int GetAge() {
-            return settings.GetValueOrDefault(AGE_KEY, -1);
-        }
-
-        public string GetEmail() {
-            return settings.GetValueOrDefault(EMAIL_KEY, "");
+            get
+            {
+                return settings.GetValueOrDefault(EMAIL_KEY, "");
+            }
         }
     }
 }
