@@ -6,10 +6,10 @@ namespace LocalDataPersistent
 {
     public class PreferenceHelper
     {
-        private ISettings settings;
-        private const string NAME_KEY = "pref_name";
-        private const string AGE_KEY = "pref_age";
-        private const string EMAIL_KEY = "pref_email";
+        readonly ISettings settings;
+        const string NAME_KEY = "pref_name";
+        const string AGE_KEY = "pref_age";
+        const string EMAIL_KEY = "pref_email";
 
         public PreferenceHelper()
         {
